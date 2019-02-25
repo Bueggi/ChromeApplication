@@ -2,7 +2,8 @@
     "name": "Christophers Erste Chrome Extention",
     "version": "1.0",
     "description": "Christophers First Chrome Extention",
-    "permissions": ["storage", "declarativeContent"],
+    "options_page": "options/options.html",
+    "permissions": ["activeTab", "storage", "declarativeContent"],
     "background": {
       "scripts": ["background.js"],
       "persistent": false
