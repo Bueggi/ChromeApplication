@@ -1,6 +1,7 @@
 let changeColor = document.getElementById("badgeButton");
 let randomText = document.getElementById("randomText");
 let schreibWas = document.getElementById("schreibWas");
+let finalData = document.getElementById("finalData");
 const test = {};
 
 const tabUrl = chrome.tabs.query(
@@ -13,6 +14,7 @@ const tabUrl = chrome.tabs.query(
       .then(data => console.log(data) || data)
       .catch(err => console.log(err));
 
+    finalData.innerText = JSON.stringify(data);
     test[tab[0].id] = tab[0].url.split("=")[1];
     return tab[0].url.split("=")[1];
   }
